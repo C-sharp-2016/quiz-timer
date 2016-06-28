@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace quiz_timer
 {
@@ -20,12 +21,16 @@ namespace quiz_timer
         private Boolean timer_status = true;
         private int counter = 0;
 
-
-
-
+        
+        MySqlConnection conn;
+        private string connString;
+         
         public Form1()
         {
             InitializeComponent();
+
+            this.connection();
+
         } 
 
         private void start_click(object sender, EventArgs e)
@@ -36,7 +41,7 @@ namespace quiz_timer
 
             timer1.Tick += new EventHandler(timer1_Tick);
 
-            timer1.Interval = 10;
+            timer1.Interval = 1000;
 
             b.Enabled = false;
 
@@ -58,18 +63,18 @@ namespace quiz_timer
 
         private void timer1_Tick(object sender, EventArgs e)
         { 
-            seconds++; 
-            
+            seconds++;
+
+            if (seconds % 10 == 0)
+            {
+                Take_Screen_Shots();
+            }
+
+
             if (seconds > 59)
             {
                 minutes++;   
-                seconds = 1;
-
-                if (minutes % 10 == 0)
-                {
-                    Take_Screen_Shots();
-                } 
-
+                seconds = 1; 
             } 
             if (minutes > 59)
             { 
@@ -111,17 +116,90 @@ namespace quiz_timer
          
         private void Take_Screen_Shots()
         {
+            counter++; 
+            /*
+                SendKeys.Send("{PRTSC}");
 
-            counter++;
+                Image img = Clipboard.GetImage();
+
+                img.Save("D:\\testing.jpg"); 
+            */ 
+            Console.WriteLine(counter + "Take Screen Shots Now.");
+
+
+
+            insert();
+
+
+            //query();
+
+
              
-            SendKeys.Send("{PRTSC}");
 
-            Image img = Clipboard.GetImage();
-
-            img.Save("D:\\imagetest/"+ counter  + "captured_name.jpg");
-             
-            Console.WriteLine("Take Screen Shots Now.");
         }
 
+
+
+
+        private void connection()
+        {
+            try
+            {
+                connString = "SERVER=lifeafterpurchase.com;PORT=3306;DATABASE=twoleos_testing;UID=twoleos_testing;PASSWORD=twoleos_testing;";
+
+                conn = new MySqlConnection();
+
+                conn.ConnectionString = connString;
+
+                Console.WriteLine("Successfully Connected To Server");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        private void query()
+        {
+
+            conn.Open();
+
+            string query = "SELECT * FROM users";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                Console.Write("| id = " + dataReader["id"]);
+                Console.Write("| username = " + dataReader["username"]);
+                Console.Write("| password = " + dataReader["password"]);
+                Console.Write("| created at = " + dataReader["created_at"]);
+                Console.WriteLine("");
+            }
+
+
+            conn.Close();
+
+        }
+
+        private void insert()
+        {
+
+            conn.Open();
+
+            string query = "INSERT INTO users (username) VALUES ('tom')";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+
+        }
     }
 }
