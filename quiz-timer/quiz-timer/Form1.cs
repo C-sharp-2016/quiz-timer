@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace quiz_timer
 {
-    public partial class Form1 : Form
+    public partial class form_home1 : Form
     {
 
         private System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
@@ -25,11 +25,15 @@ namespace quiz_timer
         MySqlConnection conn;
         private string connString;
          
-        public Form1()
+        public form_home1()
         {
             InitializeComponent();
 
             this.connection();
+
+            this.Hide();
+
+           
 
         } 
 
@@ -48,6 +52,9 @@ namespace quiz_timer
             stop.Enabled = true;
 
             timer1.Start();
+
+         
+
         }
 
         private void stop_click(object sender, EventArgs e)
@@ -113,7 +120,21 @@ namespace quiz_timer
             mins.Text = minutes_zero + minutes.ToString();
             hrs.Text  = hours_zero + hours.ToString(); 
         }
-         
+
+        private void forn_home_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void settings_click(object sender, EventArgs e)
+        {
+            login_form lf = new login_form();
+
+            lf.Show();
+
+            this.Hide();
+        }
+
         private void Take_Screen_Shots()
         {
             counter++; 
@@ -137,15 +158,14 @@ namespace quiz_timer
              
 
         }
-
-
-
+        
 
         private void connection()
         {
             try
             {
-                connString = "SERVER=lifeafterpurchase.com;PORT=3306;DATABASE=twoleos_testing;UID=twoleos_testing;PASSWORD=twoleos_testing;";
+                //connString = "SERVER=lifeafterpurchase.com;PORT=3306;DATABASE=twoleos_testing;UID=twoleos_testing;PASSWORD=twoleos_testing;";
+                connString = "SERVER=localhost;PORT=3306;DATABASE=csharp_testing1;UID=root;PASSWORD=;";
 
                 conn = new MySqlConnection();
 
@@ -193,7 +213,7 @@ namespace quiz_timer
 
             conn.Open();
 
-            string query = "INSERT INTO users (username) VALUES ('tom')";
+            string query = "INSERT INTO users (username,password) VALUES ('tom','tompassword')";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.ExecuteNonQuery();
 

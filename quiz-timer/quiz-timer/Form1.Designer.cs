@@ -1,6 +1,6 @@
 ﻿namespace quiz_timer
 {
-    partial class Form1
+    partial class form_home1
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.stop = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -111,7 +112,7 @@
             // stop
             // 
             this.stop.Enabled = false;
-            this.stop.Location = new System.Drawing.Point(217, 229);
+            this.stop.Location = new System.Drawing.Point(148, 229);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(84, 44);
             this.stop.TabIndex = 10;
@@ -119,11 +120,23 @@
             this.stop.UseVisualStyleBackColor = true;
             this.stop.Click += new System.EventHandler(this.stop_click);
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(253, 229);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 44);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Settings";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.settings_click);
+            // 
+            // form_home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(340, 285);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.stop);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -132,8 +145,10 @@
             this.Controls.Add(this.hrs);
             this.Controls.Add(this.start);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "form_home1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "home";
+            this.Load += new System.EventHandler(this.forn_home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +164,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button stop;
+        private System.Windows.Forms.Button button1;
     }
 }
 
