@@ -38,7 +38,7 @@
             // login
             // 
             this.login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login.Location = new System.Drawing.Point(106, 125);
+            this.login.Location = new System.Drawing.Point(106, 111);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(100, 43);
             this.login.TabIndex = 0;
