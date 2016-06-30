@@ -237,6 +237,7 @@
             this.label4.Size = new System.Drawing.Size(27, 31);
             this.label4.TabIndex = 4;
             this.label4.Text = "x";
+            this.label4.Click += new System.EventHandler(this.click_close);
             // 
             // label3
             // 
@@ -282,10 +283,9 @@
             // 
             this.view_dashboard.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.view_dashboard.Controls.Add(this.label6);
-            this.view_dashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_dashboard.Location = new System.Drawing.Point(0, 0);
+            this.view_dashboard.Location = new System.Drawing.Point(608, 143);
             this.view_dashboard.Name = "view_dashboard";
-            this.view_dashboard.Size = new System.Drawing.Size(623, 478);
+            this.view_dashboard.Size = new System.Drawing.Size(623, 310);
             this.view_dashboard.TabIndex = 2;
             // 
             // view_settings
@@ -308,10 +308,9 @@
             this.view_settings.Controls.Add(this.hrs);
             this.view_settings.Controls.Add(this.label9);
             this.view_settings.Controls.Add(this.label5);
-            this.view_settings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_settings.Location = new System.Drawing.Point(174, 47);
+            this.view_settings.Location = new System.Drawing.Point(195, 131);
             this.view_settings.Name = "view_settings";
-            this.view_settings.Size = new System.Drawing.Size(623, 478);
+            this.view_settings.Size = new System.Drawing.Size(623, 466);
             this.view_settings.TabIndex = 4;
             // 
             // label5

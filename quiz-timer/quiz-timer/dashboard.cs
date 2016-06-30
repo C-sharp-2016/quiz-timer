@@ -65,6 +65,9 @@ namespace quiz_timer
         }
 
 
+ 
+
+        
 
         private void flatten_button_select(object sender, EventArgs e)
         { 
@@ -103,6 +106,12 @@ namespace quiz_timer
             {
                 b3.BackColor = OrangeRed;
             } 
+        }
+
+        private void click_close(object sender, EventArgs e)
+        {
+          
+            Application.Exit();
         }
     }
 }
