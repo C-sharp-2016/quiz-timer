@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.sidepanel = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.b3 = new System.Windows.Forms.Button();
+            this.b2 = new System.Windows.Forms.Button();
+            this.b1 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.b0 = new System.Windows.Forms.Button();
             this.logopanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.headerpanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.sidepanel.SuspendLayout();
             this.logopanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,11 +55,11 @@
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.SystemColors.GrayText;
-            this.sidepanel.Controls.Add(this.button4);
-            this.sidepanel.Controls.Add(this.button3);
-            this.sidepanel.Controls.Add(this.button2);
+            this.sidepanel.Controls.Add(this.b3);
+            this.sidepanel.Controls.Add(this.b2);
+            this.sidepanel.Controls.Add(this.b1);
             this.sidepanel.Controls.Add(this.radioButton1);
-            this.sidepanel.Controls.Add(this.button1);
+            this.sidepanel.Controls.Add(this.b0);
             this.sidepanel.Controls.Add(this.logopanel);
             this.sidepanel.Controls.Add(this.panel1);
             this.sidepanel.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -69,56 +69,59 @@
             this.sidepanel.Size = new System.Drawing.Size(174, 525);
             this.sidepanel.TabIndex = 0;
             // 
-            // button4
+            // b3
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Location = new System.Drawing.Point(0, 173);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 42);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Payment";
-            this.button4.UseVisualStyleBackColor = false;
+            this.b3.BackColor = System.Drawing.SystemColors.ControlText;
+            this.b3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.b3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.b3.FlatAppearance.BorderSize = 0;
+            this.b3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.b3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.b3.Location = new System.Drawing.Point(0, 173);
+            this.b3.Name = "b3";
+            this.b3.Size = new System.Drawing.Size(174, 42);
+            this.b3.TabIndex = 7;
+            this.b3.Text = "Payment";
+            this.b3.UseVisualStyleBackColor = false;
+            this.b3.Click += new System.EventHandler(this.flatten_button_select);
             // 
-            // button3
+            // b2
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(0, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 42);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Account";
-            this.button3.UseVisualStyleBackColor = false;
+            this.b2.BackColor = System.Drawing.SystemColors.ControlText;
+            this.b2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.b2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.b2.FlatAppearance.BorderSize = 0;
+            this.b2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.b2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.b2.Location = new System.Drawing.Point(0, 131);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(174, 42);
+            this.b2.TabIndex = 6;
+            this.b2.Text = "Account";
+            this.b2.UseVisualStyleBackColor = false;
+            this.b2.Click += new System.EventHandler(this.flatten_button_select);
             // 
-            // button2
+            // b1
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button2.Location = new System.Drawing.Point(0, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 42);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Settings";
-            this.button2.UseVisualStyleBackColor = false;
+            this.b1.BackColor = System.Drawing.SystemColors.ControlText;
+            this.b1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.b1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.b1.FlatAppearance.BorderSize = 0;
+            this.b1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.b1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.b1.Location = new System.Drawing.Point(0, 89);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(174, 42);
+            this.b1.TabIndex = 5;
+            this.b1.Text = "Settings";
+            this.b1.UseVisualStyleBackColor = false;
+            this.b1.Click += new System.EventHandler(this.flatten_button_select);
             // 
             // radioButton1
             // 
@@ -131,22 +134,23 @@
             this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // b0
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(0, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 42);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Dashboard";
-            this.button1.UseVisualStyleBackColor = false;
+            this.b0.BackColor = System.Drawing.SystemColors.ControlText;
+            this.b0.Dock = System.Windows.Forms.DockStyle.Top;
+            this.b0.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.b0.FlatAppearance.BorderSize = 0;
+            this.b0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.b0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.b0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b0.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.b0.Location = new System.Drawing.Point(0, 47);
+            this.b0.Name = "b0";
+            this.b0.Size = new System.Drawing.Size(174, 42);
+            this.b0.TabIndex = 3;
+            this.b0.Text = "Dashboard";
+            this.b0.UseVisualStyleBackColor = false;
+            this.b0.Click += new System.EventHandler(this.flatten_button_select);
             // 
             // logopanel
             // 
@@ -200,6 +204,26 @@
             this.headerpanel.Size = new System.Drawing.Size(623, 47);
             this.headerpanel.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(578, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 31);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "x";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(549, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 31);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "-";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -230,26 +254,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(549, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 31);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "-";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(578, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 31);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "x";
-            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +265,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dashboard";
             this.Text = "dashboard";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashboard_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dashboard_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dashboard_MouseUp);
             this.sidepanel.ResumeLayout(false);
             this.sidepanel.PerformLayout();
             this.logopanel.ResumeLayout(false);
@@ -283,10 +290,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button b0;
+        private System.Windows.Forms.Button b3;
+        private System.Windows.Forms.Button b2;
+        private System.Windows.Forms.Button b1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
