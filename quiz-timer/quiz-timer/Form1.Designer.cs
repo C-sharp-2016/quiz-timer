@@ -51,7 +51,7 @@
             // 
             // start
             // 
-            this.start.Location = new System.Drawing.Point(30, 229);
+            this.start.Location = new System.Drawing.Point(12, 406);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(83, 44);
             this.start.TabIndex = 4;
@@ -112,7 +112,7 @@
             // stop
             // 
             this.stop.Enabled = false;
-            this.stop.Location = new System.Drawing.Point(148, 229);
+            this.stop.Location = new System.Drawing.Point(134, 406);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(84, 44);
             this.stop.TabIndex = 10;
@@ -122,7 +122,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(253, 229);
+            this.button1.Location = new System.Drawing.Point(247, 406);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 44);
             this.button1.TabIndex = 11;
@@ -135,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(340, 285);
+            this.ClientSize = new System.Drawing.Size(334, 462);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.stop);
             this.Controls.Add(this.label7);
@@ -145,6 +145,7 @@
             this.Controls.Add(this.hrs);
             this.Controls.Add(this.start);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(400, 600);
             this.Name = "form_home1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "home";
