@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Threading;
 
 namespace quiz_timer
 {
@@ -74,7 +75,11 @@ namespace quiz_timer
 
             if (seconds % 10 == 0)
             {
-                Take_Screen_Shots();
+
+                Thread th = new Thread(Take_Screen_Shots);
+                th.Start();
+
+
             }
 
 

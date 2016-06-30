@@ -16,7 +16,7 @@ namespace quiz_timer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login_form());
+            Application.Run(new form_home1());
         }
     }
 }
