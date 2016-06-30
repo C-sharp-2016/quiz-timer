@@ -113,5 +113,12 @@ namespace quiz_timer
           
             Application.Exit();
         }
+
+        private void click_minimize(object sender, EventArgs e)
+        {
+           
+
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -248,6 +248,7 @@
             this.label3.Size = new System.Drawing.Size(23, 31);
             this.label3.TabIndex = 3;
             this.label3.Text = "-";
+            this.label3.Click += new System.EventHandler(this.click_minimize);
             // 
             // label2
             // 
@@ -281,17 +282,16 @@
             // 
             // view_dashboard
             // 
-            this.view_dashboard.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.view_dashboard.BackColor = System.Drawing.SystemColors.Highlight;
             this.view_dashboard.Controls.Add(this.label6);
-            this.view_dashboard.Location = new System.Drawing.Point(608, 143);
+            this.view_dashboard.Location = new System.Drawing.Point(174, 69);
             this.view_dashboard.Name = "view_dashboard";
-            this.view_dashboard.Size = new System.Drawing.Size(623, 310);
+            this.view_dashboard.Size = new System.Drawing.Size(623, 491);
             this.view_dashboard.TabIndex = 2;
             // 
             // view_settings
             // 
             this.view_settings.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.view_settings.Controls.Add(this.view_dashboard);
             this.view_settings.Controls.Add(this.button1);
             this.view_settings.Controls.Add(this.stop);
             this.view_settings.Controls.Add(this.label10);
@@ -308,9 +308,9 @@
             this.view_settings.Controls.Add(this.hrs);
             this.view_settings.Controls.Add(this.label9);
             this.view_settings.Controls.Add(this.label5);
-            this.view_settings.Location = new System.Drawing.Point(195, 131);
+            this.view_settings.Location = new System.Drawing.Point(197, 53);
             this.view_settings.Name = "view_settings";
-            this.view_settings.Size = new System.Drawing.Size(623, 466);
+            this.view_settings.Size = new System.Drawing.Size(623, 478);
             this.view_settings.TabIndex = 4;
             // 
             // label5
@@ -487,6 +487,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(797, 525);
+            this.Controls.Add(this.view_dashboard);
             this.Controls.Add(this.view_settings);
             this.Controls.Add(this.headerpanel);
             this.Controls.Add(this.sidepanel);
