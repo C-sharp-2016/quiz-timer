@@ -67,29 +67,32 @@ namespace quiz_timer
 
 
         private void flatten_button_select(object sender, EventArgs e)
-        {
-
+        { 
             Button b = (Button)sender;
-
-
-
+             
             System.Drawing.Color OrangeRed = System.Drawing.Color.OrangeRed;
             System.Drawing.Color BlackColor = System.Drawing.Color.Black;
-
-
+             
             b0.BackColor = BlackColor;
             b1.BackColor = BlackColor;
             b2.BackColor = BlackColor;
             b3.BackColor = BlackColor;
-
              
              
             if (b.Text == "Dashboard")
             {
                 b0.BackColor = OrangeRed;
+
+                view_settings.Hide();
+                view_dashboard.Show();
+                
+
             }
             else if (b.Text == "Settings")
             {
+                view_dashboard.Hide();
+                view_settings.Show();
+                 
                 b1.BackColor = OrangeRed;
             }
             else if (b.Text == "Account")
@@ -99,10 +102,7 @@ namespace quiz_timer
             else if (b.Text == "Payment")
             {
                 b3.BackColor = OrangeRed;
-            }
-
-         
-
+            } 
         }
     }
 }

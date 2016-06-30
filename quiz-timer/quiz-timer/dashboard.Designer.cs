@@ -44,12 +44,33 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.view_dashboard = new System.Windows.Forms.Panel();
+            this.view_settings = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.secs = new System.Windows.Forms.Label();
+            this.mins = new System.Windows.Forms.Label();
+            this.hrs = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.stop = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.start = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.sidepanel.SuspendLayout();
             this.logopanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.headerpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.view_dashboard.SuspendLayout();
+            this.view_settings.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidepanel
@@ -203,6 +224,9 @@
             this.headerpanel.Name = "headerpanel";
             this.headerpanel.Size = new System.Drawing.Size(623, 47);
             this.headerpanel.TabIndex = 1;
+            this.headerpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashboard_MouseDown);
+            this.headerpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dashboard_MouseMove);
+            this.headerpanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dashboard_MouseUp);
             // 
             // label4
             // 
@@ -254,12 +278,217 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // view_dashboard
+            // 
+            this.view_dashboard.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.view_dashboard.Controls.Add(this.label6);
+            this.view_dashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_dashboard.Location = new System.Drawing.Point(0, 0);
+            this.view_dashboard.Name = "view_dashboard";
+            this.view_dashboard.Size = new System.Drawing.Size(623, 478);
+            this.view_dashboard.TabIndex = 2;
+            // 
+            // view_settings
+            // 
+            this.view_settings.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.view_settings.Controls.Add(this.view_dashboard);
+            this.view_settings.Controls.Add(this.button1);
+            this.view_settings.Controls.Add(this.stop);
+            this.view_settings.Controls.Add(this.label10);
+            this.view_settings.Controls.Add(this.label11);
+            this.view_settings.Controls.Add(this.label12);
+            this.view_settings.Controls.Add(this.label13);
+            this.view_settings.Controls.Add(this.label14);
+            this.view_settings.Controls.Add(this.start);
+            this.view_settings.Controls.Add(this.label15);
+            this.view_settings.Controls.Add(this.label7);
+            this.view_settings.Controls.Add(this.label8);
+            this.view_settings.Controls.Add(this.secs);
+            this.view_settings.Controls.Add(this.mins);
+            this.view_settings.Controls.Add(this.hrs);
+            this.view_settings.Controls.Add(this.label9);
+            this.view_settings.Controls.Add(this.label5);
+            this.view_settings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_settings.Location = new System.Drawing.Point(174, 47);
+            this.view_settings.Name = "view_settings";
+            this.view_settings.Size = new System.Drawing.Size(623, 478);
+            this.view_settings.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(21, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(183, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Settings Page";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(64, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(217, 31);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Dashboard Page";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(382, -55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(15, 24);
+            this.label7.TabIndex = 18;
+            this.label7.Text = ":";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(324, -55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 24);
+            this.label8.TabIndex = 17;
+            this.label8.Text = ":";
+            // 
+            // secs
+            // 
+            this.secs.AutoSize = true;
+            this.secs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secs.Location = new System.Drawing.Point(415, -55);
+            this.secs.Name = "secs";
+            this.secs.Size = new System.Drawing.Size(30, 24);
+            this.secs.TabIndex = 16;
+            this.secs.Text = "00";
+            // 
+            // mins
+            // 
+            this.mins.AutoSize = true;
+            this.mins.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mins.Location = new System.Drawing.Point(346, -55);
+            this.mins.Name = "mins";
+            this.mins.Size = new System.Drawing.Size(30, 24);
+            this.mins.TabIndex = 15;
+            this.mins.Text = "00";
+            // 
+            // hrs
+            // 
+            this.hrs.AutoSize = true;
+            this.hrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hrs.Location = new System.Drawing.Point(288, -55);
+            this.hrs.Name = "hrs";
+            this.hrs.Size = new System.Drawing.Size(30, 24);
+            this.hrs.TabIndex = 14;
+            this.hrs.Text = "00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(170, -55);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 24);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Time Spent:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(452, 394);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 44);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Settings";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // stop
+            // 
+            this.stop.Enabled = false;
+            this.stop.Location = new System.Drawing.Point(339, 394);
+            this.stop.Name = "stop";
+            this.stop.Size = new System.Drawing.Size(84, 44);
+            this.stop.TabIndex = 26;
+            this.stop.Text = "Stop";
+            this.stop.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(415, 195);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(15, 24);
+            this.label10.TabIndex = 25;
+            this.label10.Text = ":";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(358, 195);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(15, 24);
+            this.label11.TabIndex = 24;
+            this.label11.Text = ":";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(442, 195);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(30, 24);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "00";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(372, 195);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 24);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "00";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(322, 195);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(30, 24);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "00";
+            // 
+            // start
+            // 
+            this.start.Location = new System.Drawing.Point(217, 394);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(83, 44);
+            this.start.TabIndex = 20;
+            this.start.Text = "Start";
+            this.start.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(204, 195);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 24);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Time Spent:";
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(797, 525);
+            this.Controls.Add(this.view_settings);
             this.Controls.Add(this.headerpanel);
             this.Controls.Add(this.sidepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -277,6 +506,10 @@
             this.headerpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.view_dashboard.ResumeLayout(false);
+            this.view_dashboard.PerformLayout();
+            this.view_settings.ResumeLayout(false);
+            this.view_settings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -299,5 +532,24 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel view_dashboard;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel view_settings;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label secs;
+        private System.Windows.Forms.Label mins;
+        private System.Windows.Forms.Label hrs;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button stop;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button start;
+        private System.Windows.Forms.Label label15;
     }
 }
